@@ -1,3 +1,6 @@
+--0. schema 설정;
+set search_path to study; show search_path; SELECT session_user, current_database();
+
 --1. 기존 테이블을 바탕으로 새 테이블 생성
 select * 
 into tmp1 
