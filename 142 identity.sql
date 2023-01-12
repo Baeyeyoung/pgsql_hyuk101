@@ -29,6 +29,9 @@ create table 판매상세 (
 ,	수량	smallint
 )
 ;
+select * from 판매;
+select * from 판매상세;
+
 
 -- 연습, 공부
 begin;
@@ -37,7 +40,6 @@ begin;
 	insert into 판매 values (default, now(), 1, 100000, 10) returning *;
 	select * from 판매;
 rollback;
-
 
 
 
@@ -56,22 +58,37 @@ begin;
 commit;
 
 
-
 ---세션 2
+rollback;
+set search_path to study; 
 begin;
 	WITH ins1 AS (
 		insert into 판매 values (default, now(), 11, 100000, 10) returning 판매번호
 	)
 	insert into 판매상세 
-		SELECT 판매번호, 11, 11, 90	FROM ins1
+		SELECT 판매번호, 1, 11, 90	FROM ins1
 		union all
-		SELECT 판매번호, 21, 200, 10	FROM ins1;
+		SELECT 판매번호, 2, 200, 10	FROM ins1;
 
 	select * from 판매;
 	select * from 판매상세;
 commit;
-
-
+------끝. 세션2
 
 --만약 insert select라면
-insert into 판매 (
+select * from 판매;
+select * from 판매상세;
+--
+with ins1 as (
+	insert into 판매 (판매일자, 고객번호, 금액, 수량)
+		SELECT 판매일자+time '03:00', 고객번호, 금액, 수량  FROM 판매 limit 1	returning 판매번호
+) 
+insert into 판매상세
+--	select (select ins1.판매번호 from ins1), 1, 판매상세.상품번호, 판매상세.수량  from 판매상세 limit 1; 
+	SELECT 판매번호, 1, 11, 10	FROM ins1 
+	union all 
+	SELECT 판매번호, 2, 12, 30	FROM ins1
+
+;
+select * from 판매;
+select * from 판매상세;
