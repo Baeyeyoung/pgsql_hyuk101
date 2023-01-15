@@ -5,13 +5,16 @@ create schema if not exists study;
 
 --show current schema
 set search_path to study; 
-SELECT session_user, current_database();
 show search_path;
+SELECT session_user, current_database();
 
 
-create user hyuk with encrypted password 'dufrhd!'; 
+create user hyuk with encrypted password 'dufrhd!';
+--check Roles
+SELECT rolname FROM pg_roles;
+
 create schema authorization hyuk;
-
+--check Schemas
 SELECT schema_name
 FROM information_schema.schemata;
 
