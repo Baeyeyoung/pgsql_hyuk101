@@ -46,6 +46,8 @@ drop user hyuk;
 --SQL Error [2BP01]: ERROR: role "hyuk" cannot be dropped because some objects depend on it
 --  Detail: privileges for schema public
 
+create database temp;
+--다른 세션에서 사용해 본다.
 
 --데이터베이스 삭제
 drop database temp;
