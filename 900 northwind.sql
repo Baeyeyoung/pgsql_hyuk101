@@ -4,7 +4,13 @@
  * 필요하면 만든다. create database northwind;
  */
 
-set search_path to nothwind; show search_path; SELECT session_user, current_database();
+-- 다음 세 줄은 반드시 따로 실행한다. 
+set search_path to nothwind; show search_path; 
+SELECT session_user, current_database(); 
+set search_path to public;
+-- Ctrl + 0 를 눌러 northwind.public 이 선택되었는지 확인한다. 
+-- 아니라면 실행 중단한다.
+
 
 --
 -- PostgreSQL database dump
