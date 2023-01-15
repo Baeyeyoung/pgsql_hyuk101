@@ -1,7 +1,7 @@
 /*
-	전문가로 가는 지름길 1 / 개발자용
-	제 2장 소스 스크립트 
-	정원혁 2000.1
+	coalesce, 연산과 null, where, patter matching, is null
+	전문가로 가는 지름길 1 / 개발자용 5장 스크립트
+ 	정원혁 2000.1
 	for pgsql 2022.11	
 */
 
@@ -12,6 +12,8 @@ select coalesce(3, 1), coalesce(null, 1), coalesce(3, null);
 select coalesce(null, null, 3), coalesce(null, null, 3, null);
 
 select customer_id , city, region, coalesce (region, 'N/A') from customers;
+select customer_id , city, region, coalesce (region, 'N/A') from customers where region is null;
+select customer_id , city, region, coalesce (region, 'N/A') from customers where region is not null;
 
 
 (select order_id , freight from orders o limit 3) 
