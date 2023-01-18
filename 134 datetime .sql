@@ -34,6 +34,7 @@ where to_char(order_date, 'yyyy-mm-dd') between '1996-07-04' and '1996-07-14';
 select now() + time '03:00', CURRENT_TIMESTAMP + time '03:00' ;
 select now() + interval '24' hours;
 select date '2001-09-28' + integer '7';
+SELECT date_trunc('month', now()) - INTERVAL '6 month';
 
 -- 오류
 -- select now() + integer '7';
