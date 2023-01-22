@@ -42,7 +42,7 @@ select * from o where order_id = 10248;
 UPDATE o
 SET shipped_date = (SELECT MAX(order_date) FROM o WHERE customer_id = o.customer_id)
 WHERE employee_id = 5
-AND EXISTS (SELECT 1 FROM customers WHERE customer_id = orders.customer_id AND customers.country = 'USA');
+AND EXISTS (SELECT 1 FROM customers WHERE customer_id = o.customer_id AND customers.country = 'USA');
 
 --이해를 위해서 
 select * from customers;
