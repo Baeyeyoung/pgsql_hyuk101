@@ -1,3 +1,7 @@
+/*
+	인덱스 정보 얻기
+	for pgsql 정원혁 2022.10
+*/
 SELECT
     n.nspname  as "schema",
     t.relname  as "table",

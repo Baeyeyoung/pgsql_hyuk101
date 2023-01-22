@@ -1,6 +1,6 @@
 /*
 	트랜잭션
-	for pgsql 2023.01
+	for pgsql 정원혁  2023.01
 	
 	https://www.postgresql.org/docs/current/transaction-iso.html
 */

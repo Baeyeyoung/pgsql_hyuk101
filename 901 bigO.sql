@@ -2,9 +2,8 @@
  * orders를 늘려 10,790개의 행을 만든다
  * 일부 데이터를 조작하여 null로 바꾼다
  * 인덱스를 만든다.
- * 
- * 정원혁 202211
- */
+ * for pgsql 정원혁 2022.11
+  */
 drop table if exists bigO;
 
 select * 

@@ -1,7 +1,8 @@
 /*
 	GRUOP
 	for pgsql 2023.01 
-	
+	정원혁 2023.01
+
 	https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-group-by/
 */
 

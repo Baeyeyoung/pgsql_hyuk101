@@ -1,6 +1,7 @@
 /*
 	UNION 
 	for pgsql 2023.01	
+	정원혁 2023.01
 */
 
 -- UNION / UNION ALL 차이

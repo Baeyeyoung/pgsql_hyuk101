@@ -1,3 +1,10 @@
+/*
+	테이블 생성, 변경, 삭제. 제약
+	for pgsql 정원혁 2023.01
+	
+	https://www.postgresql.org/docs/current/transaction-iso.html
+*/
+
 --0. schema 설정;
 set search_path to study; show search_path; SELECT session_user, current_database();
 

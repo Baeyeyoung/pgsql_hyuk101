@@ -1,4 +1,5 @@
-/*
+/* 제약 CONSTRAINT
+ * for pgsql 정원혁 2022.12
  * 142 identity.sql 에 이어진다
  */
 

@@ -1,6 +1,8 @@
 /*
+ * 날짜 시간 처리 방법
  * https://www.postgresql.org/docs/current/datatype-datetime.html
  * https://www.devkuma.com/docs/postgresql/날짜/시간-형식-timestamp-interval-data-등/ 
+ * for pgsql 정원혁 2023.01
  */
 
 

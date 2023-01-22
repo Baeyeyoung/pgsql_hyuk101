@@ -1,6 +1,6 @@
 /*
 	UPDATE with TRANSACTION
-	for pgsql 2023.01
+	for 정원혁 pgsql 2023.01
 	
 	
 */

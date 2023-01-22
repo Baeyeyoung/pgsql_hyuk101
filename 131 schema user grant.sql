@@ -1,5 +1,6 @@
 /*
-	정원혁 스키마 생성, 관리, 삭제
+	스키마 생성, 관리, 삭제
+	for pgsql 정원혁 2022.12
 */
 create schema if not exists study;
 

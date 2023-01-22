@@ -1,3 +1,7 @@
+/*
+	테이블, 컬럼 정보 얻기. 명세서 생성
+	for pgsql 정원혁 2022.10
+*/
 create or replace view vTables
 as
 select * from information_schema.tables

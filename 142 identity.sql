@@ -1,4 +1,6 @@
 /*
+* IDENTITY
+* for pgsql 정원혁 2023.01
 * https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-identity-column/
 * https://www.tutorialsteacher.com/postgresql/identity-column
 */

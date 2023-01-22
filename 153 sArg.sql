@@ -1,6 +1,6 @@
 /*
 	search argument 검색 제한자
- 	정원혁 for pgsql 2023.01	
+ 	정원혁 for pgsql 2023.01
 */
 
 select customer_id , city, region, coalesce (region, 'N/A') from customers;
