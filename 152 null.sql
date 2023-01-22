@@ -21,23 +21,6 @@ union all
 (select 11111 , null from orders o  limit 1);
 
 
---다음 둘의 차이는?
---1
-select avg(freight)
-from (
-	(select order_id , freight from orders o limit 3) 
-	union all
-	(select 11111 , null from orders o  limit 1)
-) a;
---2
-select avg(freight)
-from (
-	(select order_id , freight from orders o limit 3) 
-	union all
-	(select 11111 , coalesce (null,0) from orders o  limit 1)
-) a;
-
-
 
 /*
  * WHERE
