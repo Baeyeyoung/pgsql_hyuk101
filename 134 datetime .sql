@@ -57,7 +57,7 @@ select extract(dow from now());	--일=0, 월=1, ...
 select extract(week from now()), extract(month from now());
 select date_part('year', timestamp '20201125'), date_part('year', timestamp 'now'), date_part('year', now());
 select date_trunc('year', timestamp '20201125'), date_trunc('month', timestamp '20201125'), date_trunc('day', timestamp '20201125');
-
+SELECT order_date, date_part('year', order_date) FROM orders;
 
 
 /*
