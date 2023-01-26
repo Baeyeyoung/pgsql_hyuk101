@@ -42,6 +42,6 @@ SELECT 	cast(32.2 as  varchar(3) );
 SELECT 	cast(32  as  float );
 
 /*
- * timestamp, datetime 에 관해 : "035 datetime .sql"
+ * timestamp, datetime 에 관해 : "datetime .sql"
  */
 
