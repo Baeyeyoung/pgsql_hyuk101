@@ -38,6 +38,11 @@ select now() + interval '24' hours;
 select date '2001-09-28' + integer '7';
 SELECT date_trunc('month', now()) - INTERVAL '6 month';
 
+SELECT current_date + interval '1 year';
+SELECT pg_typeof(current_date + interval '1 year');
+SELECT (current_date + interval '1 year')::date, (now() + interval '1 year')::date;;
+SELECT pg_typeof(current_date + interval '1 year'), pg_typeof((current_date + interval '1 year')::date);
+
 -- 오류
 -- select now() + integer '7';
 -- 숫자 연산은 date 형일때만 가능하다. now 를 date형으로 변환해야 한다.
