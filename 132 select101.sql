@@ -27,5 +27,5 @@ SELECT '주문 번호:' "특수 문자가 있을 때!", order_id, customer_id
 FROM orders;
 
 
-
+--UNION.sql 앞 부분만 미리 공부
 

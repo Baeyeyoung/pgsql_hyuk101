@@ -27,6 +27,15 @@ FROM products;
 SELECT count(unit_price)
 FROM products;
 
+
+SELECT min(quantity)
+	, percentile_disc(0.25) within group (order by quantity)
+	, percentile_disc(0.50) within group (order by quantity)
+	, percentile_disc(0.75) within group (order by quantity)
+	, max(quantity)
+FROM order_details
+;
+
 --다음 둘의 차이는?
 --1
 select avg(freight)
@@ -42,4 +51,6 @@ from (
 	union all
 	(select 11111 , coalesce (null,0) from orders o  limit 1)
 ) a;
+
+
 
