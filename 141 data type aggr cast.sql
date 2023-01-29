@@ -41,6 +41,9 @@ SELECT 	cast(32.2 as  varchar(5) );
 SELECT 	cast(32.2 as  varchar(3) );
 SELECT 	cast(32  as  float );
 
+
+SELECT 32::float;
+SELECT 32.2::int;
 /*
  * timestamp, datetime 에 관해 : "datetime .sql"
  */
